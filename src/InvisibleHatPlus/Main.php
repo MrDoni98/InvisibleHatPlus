@@ -1,6 +1,6 @@
 <?php
 
-namespace InvisibleHat;
+namespace InvisibleHatPlus;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\Server;
