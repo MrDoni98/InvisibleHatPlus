@@ -52,7 +52,7 @@ class Main extends PluginBase implements Listener{
 					if($nItem->getEnchantment(0)){
 					   $entity->setDataFlag(Entity::DATA_FLAGS, Entity::DATA_FLAG_INVISIBLE, true);
 			                   $entity->setDataProperty(Entity::DATA_SHOW_NAMETAG, Entity::DATA_TYPE_BYTE, 0);
-			                   $entity->sendMessage(F::YELLOW. "[VG]" .F::GOLD. " Вы невидимы.");
+			                   $entity->sendMessage(F::YELLOW. ">" .F::GOLD. " Вы невидимы.");
 				        }
 				}
 			}
@@ -61,7 +61,7 @@ class Main extends PluginBase implements Listener{
 					if($oItem->getEnchantment(0)){
 					   $entity->setDataFlag(Entity::DATA_FLAGS, Entity::DATA_FLAG_INVISIBLE, false);
 			                   $entity->setDataProperty(Entity::DATA_SHOW_NAMETAG, Entity::DATA_TYPE_BYTE, 1);
-			                   $entity->sendMessage(F::YELLOW. "[VG]" .F::GOLD. " Вы снова видимы.");
+			                   $entity->sendMessage(F::YELLOW. ">" .F::GOLD. " Вы снова видимы.");
 					}
 				}
 			}
