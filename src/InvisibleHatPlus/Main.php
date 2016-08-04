@@ -50,18 +50,18 @@ class Main extends PluginBase implements Listener{
 		        if($nItem->getId() == 298){
 			        if($nItem->getCustomName() == "Шапка-невидимка"){
 					if($nItem->getEnchantment(0)){
-					   $entity->setDataFlag(Entity::DATA_FLAGS, Entity::DATA_FLAG_INVISIBLE, true);
-			                   $entity->setDataProperty(Entity::DATA_SHOW_NAMETAG, Entity::DATA_TYPE_BYTE, 0);
-			                   $entity->sendMessage(F::YELLOW. ">" .F::GOLD. " Вы невидимы.");
+					   foreach($this->getServer()->getOnlinePlayers() as $players){
+					   	$players->hidePlayer($player);
+					   }
 				        }
 				}
 			}
 			if($oItem->getId() == 298){
 				if($oItem->getCustomName() == "Шапка-невидимка"){
 					if($oItem->getEnchantment(0)){
-					   $entity->setDataFlag(Entity::DATA_FLAGS, Entity::DATA_FLAG_INVISIBLE, false);
-			                   $entity->setDataProperty(Entity::DATA_SHOW_NAMETAG, Entity::DATA_TYPE_BYTE, 1);
-			                   $entity->sendMessage(F::YELLOW. ">" .F::GOLD. " Вы снова видимы.");
+					   foreach($this->getServer()->getOnlinePlayers() as $players){
+					   	$players->showPlayer($player);
+					   }
 					}
 				}
 			}
