@@ -53,6 +53,7 @@ class Main extends PluginBase implements Listener{
 					   foreach($this->getServer()->getOnlinePlayers() as $players){
 					   	$players->hidePlayer($player);
 					   }
+					   $player->sendMessage(F::YELLOW.">".F::BLUE."Вы стали невидимы");
 				        }
 				}
 			}
@@ -62,6 +63,7 @@ class Main extends PluginBase implements Listener{
 					   foreach($this->getServer()->getOnlinePlayers() as $players){
 					   	$players->showPlayer($player);
 					   }
+					   $player->sendMessage(F::YELLOW.">".F::BLUE."Вы снова видимы");
 					}
 				}
 			}
