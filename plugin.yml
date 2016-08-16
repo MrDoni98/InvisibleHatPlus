@@ -10,8 +10,8 @@ commands:
 
 permissions:
  ivisiblehat.cmd:
-  deffault: op
+  default: op
   description: "получение шапки"
  ivisiblehat:
-  deffault: op
+  default: op
   description: "использование шапки"
